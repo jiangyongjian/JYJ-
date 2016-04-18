@@ -1,0 +1,59 @@
+//
+//  PrefixHeader.pch
+//  JYJ不得姐
+//
+//  Created by JYJ on 16/3/30.
+//  Copyright © 2016年 baobeikeji. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#pragma mark - 头文件
+#import "JYJExtensions.h"
+#import "JYJConst.h"
+#endif
+
+/**
+ *  弱引用
+ */
+#define JYJWeakSelf __weak typeof(self) weakSelf = self;
+
+#define JYJNoteCenter [NSNotificationCenter defaultCenter]
+
+#define JYJScreenH [UIScreen mainScreen].bounds.size.height
+#define JYJScreenW [UIScreen mainScreen].bounds.size.width
+#define JYJScreenBounds [UIScreen mainScreen].bounds
+#define JYJKeyWindow [UIApplication sharedApplication].keyWindow
+
+// 随机色
+#define JYJRandomColor JYJColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+// 设置颜色
+#define JYJColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define JYJColorAlpha(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+//保单显示文字颜色
+#define The_Prompt_Color_Nine [[UIColor alloc]initWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1]
+#define The_Prompt_Color_Six [[UIColor alloc]initWithRed:102/255.0 green:102/255.0 blue:102/255.0 alpha:1]
+#define The_Prompt_Color_Three [[UIColor alloc]initWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1]
+
+#define The_MainColor JYJColor(58, 149, 252)
+#define JYJGlobalBg JYJColor(223, 223, 223)
+// 自定义log
+#ifdef DEBUG
+
+#define JYJLog(...) NSLog(@"%s %d \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+
+#else
+
+#define JYJLog(...)
+
+#endif
+
+
+
+#endif /* PrefixHeader_pch */

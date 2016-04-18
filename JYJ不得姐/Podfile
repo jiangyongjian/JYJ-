@@ -1,0 +1,9 @@
+platform :ios, '7.0'
+target 'JYJ不得姐' do
+pod 'MJExtension'
+pod 'MJRefresh'
+pod 'AFNetworking'
+pod 'SDWebImage'
+pod 'SVProgressHUD'
+end
+
