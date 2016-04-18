@@ -8,6 +8,7 @@
 
 #import "JYJRecommendViewController.h"
 #import "JYJRecommendCategoryCell.h"
+#import "JYJRecommendUserCell.h"
 #import <AFNetworking.h>
 #import <SVProgressHUD.h>
 #import "JYJRecommendCategory.h"
@@ -16,16 +17,24 @@
 @interface JYJRecommendViewController () <UITableViewDataSource, UITableViewDelegate>
 /** 左边的类别数据 */
 @property (nonatomic, strong) NSArray *categories;
+/** 右边的用户数据 */
+@property (nonatomic, strong) NSArray *users;
+
+/** 左边的类别表格 */
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
+/** 右边的用户表格 */
+@property (weak, nonatomic) IBOutlet UITableView *userTableView;
+
 @end
 
 @implementation JYJRecommendViewController
 static NSString * const JYJCategoryId = @"category";
+static NSString * const JYJUserId = @"user";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 注册cell
-    [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYJRecommendCategoryCell class]) bundle:nil] forCellReuseIdentifier:JYJCategoryId];
+    // 控制器初始化
+    [self setupTabelView];
     
     self.title = @"推荐关注";
     
@@ -60,17 +69,52 @@ static NSString * const JYJCategoryId = @"category";
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
     }];
 }
+/**
+ *  初始化
+ */
+- (void)setupTabelView {
+    // 注册cell
+    [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYJRecommendCategoryCell class]) bundle:nil] forCellReuseIdentifier:JYJCategoryId];
+    [self.userTableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYJRecommendUserCell class]) bundle:nil] forCellReuseIdentifier:JYJUserId];
+    
+
+    
+    
+
+}
 
 #pragma mark - <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.categories.count;
+    if (tableView == self.categoryTableView) { // 左边的类别表格
+        return self.categories.count;
+    } else { // 右边的用户表格
+        return self.users.count;
+    }
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    JYJRecommendCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:JYJCategoryId];
-    cell.category = self.categories[indexPath.row];
-    return cell;
+    if (tableView == self.categoryTableView) { // 左边的类别表格
+        JYJRecommendCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:JYJCategoryId];
+        cell.category = self.categories[indexPath.row];
+        return cell;
+    } else { // 右边的用户表格
+        JYJRecommendUserCell *cell = [tableView dequeueReusableCellWithIdentifier:JYJUserId];
+        cell.user = self.users[indexPath.row];
+        return cell;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    if (tableView == self.categoryTableView) { // 左边的类别表格
+        JYJRecommendCategory *category = self.categories[indexPath.row];
+        // 发送请求给服务器，加载右侧的数据
+        
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {

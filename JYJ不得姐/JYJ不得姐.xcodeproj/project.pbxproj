@@ -32,6 +32,9 @@
 		E22D86981CAC1A150085FB48 /* JYJNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D86971CAC1A150085FB48 /* JYJNewViewController.m */; };
 		E22D869B1CAC1A4E0085FB48 /* JYJFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D869A1CAC1A4E0085FB48 /* JYJFriendTrendsViewController.m */; };
 		E22D869E1CAC1A6B0085FB48 /* JYJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D869D1CAC1A6B0085FB48 /* JYJMeViewController.m */; };
+		E2844FDB1CC4ADD000DDB296 /* JYJRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2844FD91CC4ADD000DDB296 /* JYJRecommendUserCell.m */; };
+		E2844FDC1CC4ADD000DDB296 /* JYJRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2844FDA1CC4ADD000DDB296 /* JYJRecommendUserCell.xib */; };
+		E2844FDF1CC4B17700DDB296 /* JYJRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2844FDE1CC4B17700DDB296 /* JYJRecommendUser.m */; };
 		E2952F201CAA8DB80009C64E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2952F1F1CAA8DB80009C64E /* Assets.xcassets */; };
 		E29BAA241CAD672C00FF0972 /* JYJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E29BAA231CAD672C00FF0972 /* JYJTabBar.m */; };
 		E29BAA2C1CAFA97E00FF0972 /* JYJFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29BAA2B1CAFA97E00FF0972 /* JYJFriendTrendsViewController.xib */; };
@@ -95,6 +98,11 @@
 		E22D869A1CAC1A4E0085FB48 /* JYJFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJFriendTrendsViewController.m; sourceTree = "<group>"; };
 		E22D869C1CAC1A6B0085FB48 /* JYJMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJMeViewController.h; sourceTree = "<group>"; };
 		E22D869D1CAC1A6B0085FB48 /* JYJMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJMeViewController.m; sourceTree = "<group>"; };
+		E2844FD81CC4ADD000DDB296 /* JYJRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJRecommendUserCell.h; sourceTree = "<group>"; };
+		E2844FD91CC4ADD000DDB296 /* JYJRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJRecommendUserCell.m; sourceTree = "<group>"; };
+		E2844FDA1CC4ADD000DDB296 /* JYJRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYJRecommendUserCell.xib; sourceTree = "<group>"; };
+		E2844FDD1CC4B17700DDB296 /* JYJRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJRecommendUser.h; sourceTree = "<group>"; };
+		E2844FDE1CC4B17700DDB296 /* JYJRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJRecommendUser.m; sourceTree = "<group>"; };
 		E2952F101CAA8DB80009C64E /* JYJ不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JYJ不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2952F1F1CAA8DB80009C64E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E29BAA221CAD672C00FF0972 /* JYJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJTabBar.h; sourceTree = "<group>"; };
@@ -214,6 +222,8 @@
 			children = (
 				E29BAA321CAFBD2700FF0972 /* JYJRecommendCategory.h */,
 				E29BAA331CAFBD2700FF0972 /* JYJRecommendCategory.m */,
+				E2844FDD1CC4B17700DDB296 /* JYJRecommendUser.h */,
+				E2844FDE1CC4B17700DDB296 /* JYJRecommendUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,6 +234,9 @@
 				E29BAA381CB00A3300FF0972 /* JYJRecommendCategoryCell.h */,
 				E29BAA391CB00A3300FF0972 /* JYJRecommendCategoryCell.m */,
 				E29BAA3A1CB00A3300FF0972 /* JYJRecommendCategoryCell.xib */,
+				E2844FD81CC4ADD000DDB296 /* JYJRecommendUserCell.h */,
+				E2844FD91CC4ADD000DDB296 /* JYJRecommendUserCell.m */,
+				E2844FDA1CC4ADD000DDB296 /* JYJRecommendUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -511,6 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E29BAA2C1CAFA97E00FF0972 /* JYJFriendTrendsViewController.xib in Resources */,
+				E2844FDC1CC4ADD000DDB296 /* JYJRecommendUserCell.xib in Resources */,
 				E2952F201CAA8DB80009C64E /* Assets.xcassets in Resources */,
 				E29BAA3C1CB00A3300FF0972 /* JYJRecommendCategoryCell.xib in Resources */,
 				E29BAA311CAFAFD100FF0972 /* JYJRecommendViewController.xib in Resources */,
@@ -573,6 +587,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E22D86511CAB79840085FB48 /* main.m in Sources */,
+				E2844FDF1CC4B17700DDB296 /* JYJRecommendUser.m in Sources */,
 				E29BAA341CAFBD2700FF0972 /* JYJRecommendCategory.m in Sources */,
 				E22D86781CAB7C180085FB48 /* Foundation+Log.m in Sources */,
 				E22D867F1CAB7C180085FB48 /* UIFont+Extension.m in Sources */,
@@ -582,6 +597,7 @@
 				E22D86841CAB7C180085FB48 /* UIView+Extension.m in Sources */,
 				E29BAA301CAFAFD100FF0972 /* JYJRecommendViewController.m in Sources */,
 				E22D86831CAB7C180085FB48 /* UIScreen+Extension.m in Sources */,
+				E2844FDB1CC4ADD000DDB296 /* JYJRecommendUserCell.m in Sources */,
 				E22D86791CAB7C180085FB48 /* NSDate+Extension.m in Sources */,
 				E22D86811CAB7C180085FB48 /* UIImage+ScreenShot.m in Sources */,
 				E29BAA241CAD672C00FF0972 /* JYJTabBar.m in Sources */,

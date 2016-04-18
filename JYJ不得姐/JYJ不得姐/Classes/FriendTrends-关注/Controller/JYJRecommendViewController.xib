@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JYJRecommendViewController">
             <connections>
                 <outlet property="categoryTableView" destination="K5i-zO-Y4G" id="Gai-kr-OGx"/>
+                <outlet property="userTableView" destination="kt5-Ah-q6y" id="Np5-dP-pMj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -42,7 +43,7 @@
                 <constraint firstItem="K5i-zO-Y4G" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="f2b-b4-3Ak"/>
                 <constraint firstItem="kt5-Ah-q6y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="iMk-Og-Uah"/>
             </constraints>
-            <point key="canvasLocation" x="299" y="92"/>
+            <point key="canvasLocation" x="327" y="90"/>
         </view>
     </objects>
 </document>

@@ -40,6 +40,7 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
     self.selectedIndicator.hidden = !selected;
+    self.textLabel.textColor = selected ? self.selectedIndicator.backgroundColor : JYJColor(78, 78, 78);
 }
 
 @end
