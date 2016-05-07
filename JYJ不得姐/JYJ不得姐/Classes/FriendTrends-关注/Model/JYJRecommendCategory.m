@@ -9,5 +9,11 @@
 #import "JYJRecommendCategory.h"
 
 @implementation JYJRecommendCategory
-
+- (NSMutableArray *)users
+{
+    if (!_users) {
+        _users = [NSMutableArray array];
+    }
+    return _users;
+}
 @end

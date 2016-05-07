@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		761DCF174ECA32718CB36D47 /* libPods-JYJ不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 310BA619E316C540F63F1761 /* libPods-JYJ不得姐.a */; };
+		906822A05E55F74F6CE273CE /* Pods_JYJ___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1736CC9726B5E7CE87EEF6 /* Pods_JYJ___.framework */; };
+		E220DF071CDDD05C00901797 /* JYJRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E220DF061CDDD05C00901797 /* JYJRecommendTagsViewController.m */; };
+		E220DF0A1CDDD08800901797 /* JYJRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E220DF091CDDD08800901797 /* JYJRecommendTagCell.m */; };
+		E220DF0D1CDDD0A300901797 /* JYJRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = E220DF0C1CDDD0A300901797 /* JYJRecommendTag.m */; };
+		E220DF0F1CDDD0BB00901797 /* JYJRecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E220DF0E1CDDD0BB00901797 /* JYJRecommendTagCell.xib */; };
 		E22D864F1CAB79840085FB48 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D86481CAB79840085FB48 /* AppDelegate.m */; };
 		E22D86511CAB79840085FB48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D864A1CAB79840085FB48 /* main.m */; };
 		E22D86541CAB7A260085FB48 /* JYJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D86531CAB7A260085FB48 /* JYJTabBarController.m */; };
@@ -36,6 +40,7 @@
 		E2844FDC1CC4ADD000DDB296 /* JYJRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2844FDA1CC4ADD000DDB296 /* JYJRecommendUserCell.xib */; };
 		E2844FDF1CC4B17700DDB296 /* JYJRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2844FDE1CC4B17700DDB296 /* JYJRecommendUser.m */; };
 		E2952F201CAA8DB80009C64E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2952F1F1CAA8DB80009C64E /* Assets.xcassets */; };
+		E29750D41CDA047E00DA0C8D /* UIImageView+BXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E29750D31CDA047E00DA0C8D /* UIImageView+BXExtension.m */; };
 		E29BAA241CAD672C00FF0972 /* JYJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E29BAA231CAD672C00FF0972 /* JYJTabBar.m */; };
 		E29BAA2C1CAFA97E00FF0972 /* JYJFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29BAA2B1CAFA97E00FF0972 /* JYJFriendTrendsViewController.xib */; };
 		E29BAA301CAFAFD100FF0972 /* JYJRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29BAA2E1CAFAFD100FF0972 /* JYJRecommendViewController.m */; };
@@ -43,12 +48,20 @@
 		E29BAA341CAFBD2700FF0972 /* JYJRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E29BAA331CAFBD2700FF0972 /* JYJRecommendCategory.m */; };
 		E29BAA3B1CB00A3300FF0972 /* JYJRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E29BAA391CB00A3300FF0972 /* JYJRecommendCategoryCell.m */; };
 		E29BAA3C1CB00A3300FF0972 /* JYJRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29BAA3A1CB00A3300FF0972 /* JYJRecommendCategoryCell.xib */; };
+		E2A23E091CDDF71200ED6D35 /* JYJTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A23E081CDDF71200ED6D35 /* JYJTestView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		116C39C26646FC7A6C788AAE /* Pods-JYJ不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYJ不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-JYJ不得姐/Pods-JYJ不得姐.release.xcconfig"; sourceTree = "<group>"; };
-		310BA619E316C540F63F1761 /* libPods-JYJ不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JYJ不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A425D3FDA45AE041867EEDC1 /* Pods-JYJ不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYJ不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JYJ不得姐/Pods-JYJ不得姐.debug.xcconfig"; sourceTree = "<group>"; };
+		AD1736CC9726B5E7CE87EEF6 /* Pods_JYJ___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_JYJ___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E220DF051CDDD05C00901797 /* JYJRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJRecommendTagsViewController.h; sourceTree = "<group>"; };
+		E220DF061CDDD05C00901797 /* JYJRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJRecommendTagsViewController.m; sourceTree = "<group>"; };
+		E220DF081CDDD08800901797 /* JYJRecommendTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJRecommendTagCell.h; sourceTree = "<group>"; };
+		E220DF091CDDD08800901797 /* JYJRecommendTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJRecommendTagCell.m; sourceTree = "<group>"; };
+		E220DF0B1CDDD0A300901797 /* JYJRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJRecommendTag.h; sourceTree = "<group>"; };
+		E220DF0C1CDDD0A300901797 /* JYJRecommendTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJRecommendTag.m; sourceTree = "<group>"; };
+		E220DF0E1CDDD0BB00901797 /* JYJRecommendTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYJRecommendTagCell.xib; sourceTree = "<group>"; };
 		E22D86471CAB79840085FB48 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E22D86481CAB79840085FB48 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E22D864A1CAB79840085FB48 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -105,6 +118,8 @@
 		E2844FDE1CC4B17700DDB296 /* JYJRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJRecommendUser.m; sourceTree = "<group>"; };
 		E2952F101CAA8DB80009C64E /* JYJ不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JYJ不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2952F1F1CAA8DB80009C64E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E29750D21CDA047E00DA0C8D /* UIImageView+BXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+BXExtension.h"; sourceTree = "<group>"; };
+		E29750D31CDA047E00DA0C8D /* UIImageView+BXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+BXExtension.m"; sourceTree = "<group>"; };
 		E29BAA221CAD672C00FF0972 /* JYJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJTabBar.h; sourceTree = "<group>"; };
 		E29BAA231CAD672C00FF0972 /* JYJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJTabBar.m; sourceTree = "<group>"; };
 		E29BAA2B1CAFA97E00FF0972 /* JYJFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYJFriendTrendsViewController.xib; sourceTree = "<group>"; };
@@ -116,6 +131,8 @@
 		E29BAA381CB00A3300FF0972 /* JYJRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJRecommendCategoryCell.h; sourceTree = "<group>"; };
 		E29BAA391CB00A3300FF0972 /* JYJRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJRecommendCategoryCell.m; sourceTree = "<group>"; };
 		E29BAA3A1CB00A3300FF0972 /* JYJRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYJRecommendCategoryCell.xib; sourceTree = "<group>"; };
+		E2A23E071CDDF71200ED6D35 /* JYJTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJTestView.h; sourceTree = "<group>"; };
+		E2A23E081CDDF71200ED6D35 /* JYJTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJTestView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				761DCF174ECA32718CB36D47 /* libPods-JYJ不得姐.a in Frameworks */,
+				906822A05E55F74F6CE273CE /* Pods_JYJ___.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +150,7 @@
 		0E6E0F28943C7A624B9A5F2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				310BA619E316C540F63F1761 /* libPods-JYJ不得姐.a */,
+				AD1736CC9726B5E7CE87EEF6 /* Pods_JYJ___.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -176,6 +193,8 @@
 			children = (
 				E22D86931CAC19FB0085FB48 /* JYJEssenceViewController.h */,
 				E22D86941CAC19FB0085FB48 /* JYJEssenceViewController.m */,
+				E220DF051CDDD05C00901797 /* JYJRecommendTagsViewController.h */,
+				E220DF061CDDD05C00901797 /* JYJRecommendTagsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -183,6 +202,8 @@
 		E22D86341CAB79840085FB48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E220DF0B1CDDD0A300901797 /* JYJRecommendTag.h */,
+				E220DF0C1CDDD0A300901797 /* JYJRecommendTag.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +211,11 @@
 		E22D86351CAB79840085FB48 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E220DF081CDDD08800901797 /* JYJRecommendTagCell.h */,
+				E220DF091CDDD08800901797 /* JYJRecommendTagCell.m */,
+				E220DF0E1CDDD0BB00901797 /* JYJRecommendTagCell.xib */,
+				E2A23E071CDDF71200ED6D35 /* JYJTestView.h */,
+				E2A23E081CDDF71200ED6D35 /* JYJTestView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -421,6 +447,8 @@
 				E22D86751CAB7C180085FB48 /* UIView+IBExtension.m */,
 				E22D86761CAB7C180085FB48 /* UIView+Runtime.h */,
 				E22D86771CAB7C180085FB48 /* UIView+Runtime.m */,
+				E29750D21CDA047E00DA0C8D /* UIImageView+BXExtension.h */,
+				E29750D31CDA047E00DA0C8D /* UIImageView+BXExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -524,6 +552,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E29BAA2C1CAFA97E00FF0972 /* JYJFriendTrendsViewController.xib in Resources */,
+				E220DF0F1CDDD0BB00901797 /* JYJRecommendTagCell.xib in Resources */,
 				E2844FDC1CC4ADD000DDB296 /* JYJRecommendUserCell.xib in Resources */,
 				E2952F201CAA8DB80009C64E /* Assets.xcassets in Resources */,
 				E29BAA3C1CB00A3300FF0972 /* JYJRecommendCategoryCell.xib in Resources */,
@@ -586,6 +615,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E220DF071CDDD05C00901797 /* JYJRecommendTagsViewController.m in Sources */,
 				E22D86511CAB79840085FB48 /* main.m in Sources */,
 				E2844FDF1CC4B17700DDB296 /* JYJRecommendUser.m in Sources */,
 				E29BAA341CAFBD2700FF0972 /* JYJRecommendCategory.m in Sources */,
@@ -597,13 +627,16 @@
 				E22D86841CAB7C180085FB48 /* UIView+Extension.m in Sources */,
 				E29BAA301CAFAFD100FF0972 /* JYJRecommendViewController.m in Sources */,
 				E22D86831CAB7C180085FB48 /* UIScreen+Extension.m in Sources */,
+				E220DF0A1CDDD08800901797 /* JYJRecommendTagCell.m in Sources */,
 				E2844FDB1CC4ADD000DDB296 /* JYJRecommendUserCell.m in Sources */,
 				E22D86791CAB7C180085FB48 /* NSDate+Extension.m in Sources */,
 				E22D86811CAB7C180085FB48 /* UIImage+ScreenShot.m in Sources */,
 				E29BAA241CAD672C00FF0972 /* JYJTabBar.m in Sources */,
+				E29750D41CDA047E00DA0C8D /* UIImageView+BXExtension.m in Sources */,
 				E22D86571CAB7A550085FB48 /* JYJNavigationController.m in Sources */,
 				E22D867D1CAB7C180085FB48 /* UIButton+Extension.m in Sources */,
 				E22D864F1CAB79840085FB48 /* AppDelegate.m in Sources */,
+				E220DF0D1CDDD0A300901797 /* JYJRecommendTag.m in Sources */,
 				E22D86891CAB7C660085FB48 /* JYJConst.m in Sources */,
 				E22D869E1CAC1A6B0085FB48 /* JYJMeViewController.m in Sources */,
 				E22D86801CAB7C180085FB48 /* UIImage+Extension.m in Sources */,
@@ -613,6 +646,7 @@
 				E29BAA3B1CB00A3300FF0972 /* JYJRecommendCategoryCell.m in Sources */,
 				E22D86541CAB7A260085FB48 /* JYJTabBarController.m in Sources */,
 				E22D86861CAB7C180085FB48 /* UIView+Runtime.m in Sources */,
+				E2A23E091CDDF71200ED6D35 /* JYJTestView.m in Sources */,
 				E22D867A1CAB7C180085FB48 /* NSString+BXExtension.m in Sources */,
 				E22D86951CAC19FB0085FB48 /* JYJEssenceViewController.m in Sources */,
 				E22D869B1CAC1A4E0085FB48 /* JYJFriendTrendsViewController.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "JYJEssenceViewController.h"
+#import "JYJRecommendTagsViewController.h"
 
 @interface JYJEssenceViewController ()
 
@@ -28,7 +29,8 @@
 
 - (void)tagClick
 {
-    JYJLog(@"---");
+    JYJRecommendTagsViewController *tags = [[JYJRecommendTagsViewController alloc] init];
+    [self.navigationController pushViewController:tags animated:YES];
 }
 
 

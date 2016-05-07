@@ -22,6 +22,7 @@
 #import "UIImage+Extension.h"
 #import "UILabel+Extension.h"
 #import "UIButton+Extension.h"
-
 #import "UIImage+ScreenShot.h"
+#import "UIImageView+BXExtension.h"
+
 #import "UIFont+Extension.h"

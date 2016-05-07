@@ -8,7 +8,7 @@
 
 #import "JYJRecommendUserCell.h"
 #import "JYJRecommendUser.h"
-#import <UIImageView+WebCache.h>
+#import "UIImageView+WebCache.h"
 
 @interface JYJRecommendUserCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
@@ -20,14 +20,22 @@
 @implementation JYJRecommendUserCell
 
 - (void)awakeFromNib {
-    // Initialization code
+    
 }
 
 - (void)setUser:(JYJRecommendUser *)user {
     _user = user;
     self.screenNameLabel.text = user.screen_name;
-    self.fansCountLabel.text = [NSString stringWithFormat:@"%zd人关注", user.fans_count];
-    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:user.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    NSString *fansCount = nil;
+    if (user.fans_count < 10000) {
+        fansCount = [NSString stringWithFormat:@"%zd人关注", user.fans_count];
+    } else { // 大于等于10000
+        fansCount = [NSString stringWithFormat:@"%.1f万人关注", user.fans_count / 10000.0];
+    }
+    self.fansCountLabel.text = fansCount;
+    
+    [self.headerImageView setHeader:user.header];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

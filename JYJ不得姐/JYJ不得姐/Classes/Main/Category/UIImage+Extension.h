@@ -36,4 +36,9 @@
  *  @return UIImageView
  */
 + (instancetype)imageViewWithImageName:(NSString *)imageName;
+
+/**
+ * 圆形图片
+ */
+- (UIImage *)circleImage;
 @end
