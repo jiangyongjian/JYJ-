@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "JYJTabBarController.h"
-
+#import "JYJPushGuideView.h"
 @interface AppDelegate ()
 
 @end
@@ -26,6 +26,9 @@
     
     // 显示窗口
     [self.window makeKeyAndVisible];
+    
+    // 显示推送引导
+    [JYJPushGuideView show];
     return YES;
 }
 

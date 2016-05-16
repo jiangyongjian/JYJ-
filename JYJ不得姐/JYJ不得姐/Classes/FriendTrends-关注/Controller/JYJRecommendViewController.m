@@ -183,6 +183,7 @@ static NSString * const JYJUserId = @"user";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @(category.id);
     params[@"page"] = @(++category.currentPage);
+    JYJLog(@"%@", params[@"page"]);
     self.params = params;
     
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -203,10 +204,12 @@ static NSString * const JYJUserId = @"user";
         [self checkFooterState];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (self.params != params) return;
+        --category.currentPage;
         // 显示失败信息
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
         // 结束刷新
-        [self.userTableView.mj_header endRefreshing];
+        [self.userTableView.mj_footer endRefreshing];
+        
     }];
 }
 
@@ -217,7 +220,7 @@ static NSString * const JYJUserId = @"user";
     JYJRecommendCategory *rc = JYJSelectedCategory;
     
     // 每次刷新右边数据时，都控制footer显示或者隐藏
-    JYJLog(@"%zd", rc.users.count);
+//    JYJLog(@"%zd", rc.users.count);
     self.userTableView.mj_footer.hidden = (rc.users.count == 0);
     
     // 让底部控件结束刷新

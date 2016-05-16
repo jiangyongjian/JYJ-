@@ -8,6 +8,7 @@
 
 #import "JYJFriendTrendsViewController.h"
 #import "JYJRecommendViewController.h"
+#import "JYJLoginRegisterViewController.h"
 
 @interface JYJFriendTrendsViewController ()
 
@@ -32,6 +33,11 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (IBAction)loginRegister {
+    JYJLoginRegisterViewController *login = [[JYJLoginRegisterViewController alloc] init];
+    [self presentViewController:login animated:YES completion:nil];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

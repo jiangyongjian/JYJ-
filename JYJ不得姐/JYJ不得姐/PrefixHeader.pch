@@ -23,6 +23,7 @@
 #define JYJWeakSelf __weak typeof(self) weakSelf = self;
 
 #define JYJNoteCenter [NSNotificationCenter defaultCenter]
+#define JYJUserDefaults [NSUserDefaults standardUserDefaults]
 
 #define JYJScreenH [UIScreen mainScreen].bounds.size.height
 #define JYJScreenW [UIScreen mainScreen].bounds.size.width
