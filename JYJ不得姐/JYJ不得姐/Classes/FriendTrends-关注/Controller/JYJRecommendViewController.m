@@ -220,7 +220,6 @@ static NSString * const JYJUserId = @"user";
     JYJRecommendCategory *rc = JYJSelectedCategory;
     
     // 每次刷新右边数据时，都控制footer显示或者隐藏
-//    JYJLog(@"%zd", rc.users.count);
     self.userTableView.mj_footer.hidden = (rc.users.count == 0);
     
     // 让底部控件结束刷新
