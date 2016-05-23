@@ -44,5 +44,8 @@
  *  获得与当前时间的差距
  */
 - (NSDateComponents *)deltaWithNow;
-
+/**
+ * 比较from和self的时间差值
+ */
+- (NSDateComponents *)deltaFrom:(NSDate *)from;
 @end

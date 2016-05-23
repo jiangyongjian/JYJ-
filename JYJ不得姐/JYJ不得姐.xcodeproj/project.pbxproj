@@ -36,7 +36,15 @@
 		E22D86981CAC1A150085FB48 /* JYJNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D86971CAC1A150085FB48 /* JYJNewViewController.m */; };
 		E22D869B1CAC1A4E0085FB48 /* JYJFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D869A1CAC1A4E0085FB48 /* JYJFriendTrendsViewController.m */; };
 		E22D869E1CAC1A6B0085FB48 /* JYJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D869D1CAC1A6B0085FB48 /* JYJMeViewController.m */; };
+		E24D15FA1CF032FB004B86A5 /* JYJTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E24D15F81CF032FB004B86A5 /* JYJTopicCell.m */; };
+		E24D15FB1CF032FB004B86A5 /* JYJTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24D15F91CF032FB004B86A5 /* JYJTopicCell.xib */; };
 		E26C8E7B1CE9C43D005E6241 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26C8E7A1CE9C43D005E6241 /* Reveal.framework */; };
+		E277FD071CF2B6D2000B5169 /* JYJTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E277FD061CF2B6D2000B5169 /* JYJTopicViewController.m */; };
+		E277FD0A1CF2D7DF000B5169 /* JYJTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = E277FD091CF2D7DF000B5169 /* JYJTopicPictureView.m */; };
+		E277FD0C1CF2D7F4000B5169 /* JYJTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E277FD0B1CF2D7F4000B5169 /* JYJTopicPictureView.xib */; };
+		E277FD0F1CF2F3FF000B5169 /* JYJProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E277FD0E1CF2F3FF000B5169 /* JYJProgressView.m */; };
+		E277FD131CF2FDB0000B5169 /* JYJShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E277FD111CF2FDB0000B5169 /* JYJShowPictureViewController.m */; };
+		E277FD141CF2FDB0000B5169 /* JYJShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E277FD121CF2FDB0000B5169 /* JYJShowPictureViewController.xib */; };
 		E27A52B11CEAF9A800F507A2 /* JYJBackViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E27A52B01CEAF9A800F507A2 /* JYJBackViewCell.m */; };
 		E280715F1CE9C63900FA6031 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E280715E1CE9C63900FA6031 /* libz.tbd */; };
 		E28071621CE9C9ED00FA6031 /* JYJPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = E28071611CE9C9ED00FA6031 /* JYJPushGuideView.m */; };
@@ -126,7 +134,20 @@
 		E22D869A1CAC1A4E0085FB48 /* JYJFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJFriendTrendsViewController.m; sourceTree = "<group>"; };
 		E22D869C1CAC1A6B0085FB48 /* JYJMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJMeViewController.h; sourceTree = "<group>"; };
 		E22D869D1CAC1A6B0085FB48 /* JYJMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJMeViewController.m; sourceTree = "<group>"; };
+		E24D15F71CF032FB004B86A5 /* JYJTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJTopicCell.h; sourceTree = "<group>"; };
+		E24D15F81CF032FB004B86A5 /* JYJTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJTopicCell.m; sourceTree = "<group>"; };
+		E24D15F91CF032FB004B86A5 /* JYJTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYJTopicCell.xib; sourceTree = "<group>"; };
 		E26C8E7A1CE9C43D005E6241 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		E277FD051CF2B6D2000B5169 /* JYJTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJTopicViewController.h; sourceTree = "<group>"; };
+		E277FD061CF2B6D2000B5169 /* JYJTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJTopicViewController.m; sourceTree = "<group>"; };
+		E277FD081CF2D7DF000B5169 /* JYJTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJTopicPictureView.h; sourceTree = "<group>"; };
+		E277FD091CF2D7DF000B5169 /* JYJTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJTopicPictureView.m; sourceTree = "<group>"; };
+		E277FD0B1CF2D7F4000B5169 /* JYJTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYJTopicPictureView.xib; sourceTree = "<group>"; };
+		E277FD0D1CF2F3FF000B5169 /* JYJProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJProgressView.h; sourceTree = "<group>"; };
+		E277FD0E1CF2F3FF000B5169 /* JYJProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJProgressView.m; sourceTree = "<group>"; };
+		E277FD101CF2FDB0000B5169 /* JYJShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJShowPictureViewController.h; sourceTree = "<group>"; };
+		E277FD111CF2FDB0000B5169 /* JYJShowPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJShowPictureViewController.m; sourceTree = "<group>"; };
+		E277FD121CF2FDB0000B5169 /* JYJShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYJShowPictureViewController.xib; sourceTree = "<group>"; };
 		E27A52AF1CEAF9A800F507A2 /* JYJBackViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJBackViewCell.h; sourceTree = "<group>"; };
 		E27A52B01CEAF9A800F507A2 /* JYJBackViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJBackViewCell.m; sourceTree = "<group>"; };
 		E280715E1CE9C63900FA6031 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -249,6 +270,11 @@
 				E2F199721CEB21B6005A8D32 /* JYJPictureViewController.m */,
 				E2F199741CEB21CD005A8D32 /* JYJWordViewController.h */,
 				E2F199751CEB21CD005A8D32 /* JYJWordViewController.m */,
+				E277FD051CF2B6D2000B5169 /* JYJTopicViewController.h */,
+				E277FD061CF2B6D2000B5169 /* JYJTopicViewController.m */,
+				E277FD101CF2FDB0000B5169 /* JYJShowPictureViewController.h */,
+				E277FD111CF2FDB0000B5169 /* JYJShowPictureViewController.m */,
+				E277FD121CF2FDB0000B5169 /* JYJShowPictureViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -274,6 +300,14 @@
 				E220DF0E1CDDD0BB00901797 /* JYJRecommendTagCell.xib */,
 				E2A23E071CDDF71200ED6D35 /* JYJTestView.h */,
 				E2A23E081CDDF71200ED6D35 /* JYJTestView.m */,
+				E24D15F71CF032FB004B86A5 /* JYJTopicCell.h */,
+				E24D15F81CF032FB004B86A5 /* JYJTopicCell.m */,
+				E24D15F91CF032FB004B86A5 /* JYJTopicCell.xib */,
+				E277FD081CF2D7DF000B5169 /* JYJTopicPictureView.h */,
+				E277FD091CF2D7DF000B5169 /* JYJTopicPictureView.m */,
+				E277FD0B1CF2D7F4000B5169 /* JYJTopicPictureView.xib */,
+				E277FD0D1CF2F3FF000B5169 /* JYJProgressView.h */,
+				E277FD0E1CF2F3FF000B5169 /* JYJProgressView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -621,12 +655,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E29BAA2C1CAFA97E00FF0972 /* JYJFriendTrendsViewController.xib in Resources */,
+				E277FD0C1CF2D7F4000B5169 /* JYJTopicPictureView.xib in Resources */,
+				E277FD141CF2FDB0000B5169 /* JYJShowPictureViewController.xib in Resources */,
 				E220DF0F1CDDD0BB00901797 /* JYJRecommendTagCell.xib in Resources */,
 				E2844FDC1CC4ADD000DDB296 /* JYJRecommendUserCell.xib in Resources */,
 				E28071641CE9CA0400FA6031 /* JYJPushGuideView.xib in Resources */,
 				E2952F201CAA8DB80009C64E /* Assets.xcassets in Resources */,
 				E2F976F71CE2D36C0010DBE0 /* JYJLoginRegisterViewController.xib in Resources */,
 				E29BAA3C1CB00A3300FF0972 /* JYJRecommendCategoryCell.xib in Resources */,
+				E24D15FB1CF032FB004B86A5 /* JYJTopicCell.xib in Resources */,
 				E29BAA311CAFAFD100FF0972 /* JYJRecommendViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -699,6 +736,7 @@
 				E22D86851CAB7C180085FB48 /* UIView+IBExtension.m in Sources */,
 				E22D86841CAB7C180085FB48 /* UIView+Extension.m in Sources */,
 				E29BAA301CAFAFD100FF0972 /* JYJRecommendViewController.m in Sources */,
+				E277FD0A1CF2D7DF000B5169 /* JYJTopicPictureView.m in Sources */,
 				E2F199731CEB21B6005A8D32 /* JYJPictureViewController.m in Sources */,
 				E22D86831CAB7C180085FB48 /* UIScreen+Extension.m in Sources */,
 				E28071621CE9C9ED00FA6031 /* JYJPushGuideView.m in Sources */,
@@ -709,6 +747,7 @@
 				E22D86811CAB7C180085FB48 /* UIImage+ScreenShot.m in Sources */,
 				E29BAA241CAD672C00FF0972 /* JYJTabBar.m in Sources */,
 				E29750D41CDA047E00DA0C8D /* UIImageView+BXExtension.m in Sources */,
+				E24D15FA1CF032FB004B86A5 /* JYJTopicCell.m in Sources */,
 				E2F976FD1CE30CB20010DBE0 /* JYJTextField.m in Sources */,
 				E2F199701CEB21A3005A8D32 /* JYJVoiceViewController.m in Sources */,
 				E22D86571CAB7A550085FB48 /* JYJNavigationController.m in Sources */,
@@ -729,8 +768,11 @@
 				E22D86861CAB7C180085FB48 /* UIView+Runtime.m in Sources */,
 				E2F199761CEB21CD005A8D32 /* JYJWordViewController.m in Sources */,
 				E2A23E091CDDF71200ED6D35 /* JYJTestView.m in Sources */,
+				E277FD0F1CF2F3FF000B5169 /* JYJProgressView.m in Sources */,
 				E22D867A1CAB7C180085FB48 /* NSString+BXExtension.m in Sources */,
 				E22D86951CAC19FB0085FB48 /* JYJEssenceViewController.m in Sources */,
+				E277FD071CF2B6D2000B5169 /* JYJTopicViewController.m in Sources */,
+				E277FD131CF2FDB0000B5169 /* JYJShowPictureViewController.m in Sources */,
 				E22D869B1CAC1A4E0085FB48 /* JYJFriendTrendsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -825,11 +867,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JYJ不得姐/Classes",
 					"$(PROJECT_DIR)",
 				);
+				GCC_ENABLE_KERNEL_DEVELOPMENT = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JYJ不得姐/PrefixHeader.pch";
 				INFOPLIST_FILE = "JYJ不得姐/Info.plist";
@@ -864,11 +908,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JYJ不得姐/Classes",
 					"$(PROJECT_DIR)",
 				);
+				GCC_ENABLE_KERNEL_DEVELOPMENT = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JYJ不得姐/PrefixHeader.pch";
 				INFOPLIST_FILE = "JYJ不得姐/Info.plist";

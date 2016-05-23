@@ -14,21 +14,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="340" height="161.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KZ8-ay-8dx">
-                        <rect key="frame" x="10" y="44" width="50" height="50"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KZ8-ay-8dx">
+                        <rect key="frame" x="10" y="55" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="4FX-hX-l6r"/>
                             <constraint firstAttribute="width" constant="50" id="ozp-CC-8K6"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCd-By-UNr">
-                        <rect key="frame" x="70" y="44" width="200" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCd-By-UNr">
+                        <rect key="frame" x="70" y="55" width="170" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMX-3m-NZR">
-                        <rect key="frame" x="280" y="56" width="50" height="25"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMX-3m-NZR">
+                        <rect key="frame" x="250" y="68" width="50" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="WIg-PC-D3x"/>
                             <constraint firstAttribute="width" constant="50" id="nfa-4r-MzN"/>
@@ -38,8 +38,8 @@
                             <color key="titleColor" red="1" green="0.20687657239999999" blue="0.1875417378" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huj-Kw-Ycf">
-                        <rect key="frame" x="70" y="76" width="200" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huj-Kw-Ycf">
+                        <rect key="frame" x="70" y="86" width="170" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -63,7 +63,7 @@
                 <outlet property="subNumberLabel" destination="Huj-Kw-Ycf" id="hfE-Xr-tdx"/>
                 <outlet property="themeNameLabel" destination="fCd-By-UNr" id="V9F-fJ-Np2"/>
             </connections>
-            <point key="canvasLocation" x="708" y="226.5"/>
+            <point key="canvasLocation" x="360" y="235.5"/>
         </tableViewCell>
     </objects>
     <resources>

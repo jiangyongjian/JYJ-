@@ -7,5 +7,6 @@ pod 'MJRefresh'
 pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'SVProgressHUD'
+pod 'DACircularProgress'
 end
 

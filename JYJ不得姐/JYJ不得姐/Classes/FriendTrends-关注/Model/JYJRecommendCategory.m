@@ -7,6 +7,7 @@
 //
 
 #import "JYJRecommendCategory.h"
+#import "MJExtension.h"
 
 @implementation JYJRecommendCategory
 - (NSMutableArray *)users
@@ -15,5 +16,11 @@
         _users = [NSMutableArray array];
     }
     return _users;
+}
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
+    return @{
+             @"ID" : @"id"
+             };
 }
 @end

@@ -81,7 +81,7 @@ static NSString *const CollectionCell = @"CollectionCell";
     // 标签栏整体
     UIView *titlesView = [[UIView alloc] init];
     titlesView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
-    titlesView.frame = CGRectMake(0, 64, JYJScreenW, JYJTitilesViewH);
+    titlesView.frame = CGRectMake(0, JYJNavigationBarH, JYJScreenW, JYJTitilesViewH);
     [self.view addSubview:titlesView];
     self.titlesView = titlesView;
 

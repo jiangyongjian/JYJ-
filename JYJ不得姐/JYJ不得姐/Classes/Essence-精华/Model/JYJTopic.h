@@ -8,6 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, JYJTopicType) {
+    /** 全部 */
+    JYJTopicTypeAll = 1,
+    /** 图片 */
+    JYJTopicTypePicture = 10,
+    /** 段子 */
+    JYJTopicTypeWord = 29,
+    /** 声音 */
+    JYJTopicTypeVoice = 31,
+    /** 视频 */
+    JYJTopicTypeVideo = 41
+};
+
+
 @interface JYJTopic : NSObject
 /** 名称 */
 @property (nonatomic, copy) NSString *name;
@@ -25,4 +39,31 @@
 @property (nonatomic, assign) NSInteger repost;
 /** 评论的数量 */
 @property (nonatomic, assign) NSInteger comment;
+/** 是否为新浪加V用户 */
+@property (nonatomic, assign, getter=isSina_v) BOOL sina_v;
+/** 图片的宽度 */
+@property (nonatomic, assign) CGFloat width;
+/** 图片的高度 */
+@property (nonatomic, assign) CGFloat height;
+/** 小图片的URL */
+@property (nonatomic, copy) NSString *small_image;
+/** 中图片的URL */
+@property (nonatomic, copy) NSString *middle_image;
+/** 大图片的URL */
+@property (nonatomic, copy) NSString *large_image;
+/** 帖子类型 */
+@property (nonatomic, assign) JYJTopicType type;
+
+
+/****** 额外的辅助属性 ******/
+
+/** cell的高度 */
+@property (nonatomic, assign, readonly) CGFloat cellHeight;
+/** 图片控件的frame */
+@property (nonatomic, assign, readonly) CGRect pictureF;
+
+/** 图片是否太大 */
+@property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
+/** 图片的下载进度 */
+@property (nonatomic, assign) CGFloat pictureProgress;
 @end

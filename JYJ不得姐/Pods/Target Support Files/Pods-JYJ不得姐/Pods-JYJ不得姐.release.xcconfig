@@ -1,6 +1,6 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$CONFIGURATION_BUILD_DIR/AFNetworking" "$CONFIGURATION_BUILD_DIR/MJExtension" "$CONFIGURATION_BUILD_DIR/MJRefresh" "$CONFIGURATION_BUILD_DIR/SDWebImage" "$CONFIGURATION_BUILD_DIR/SVProgressHUD"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$CONFIGURATION_BUILD_DIR/AFNetworking" "$CONFIGURATION_BUILD_DIR/DACircularProgress" "$CONFIGURATION_BUILD_DIR/MJExtension" "$CONFIGURATION_BUILD_DIR/MJRefresh" "$CONFIGURATION_BUILD_DIR/SDWebImage" "$CONFIGURATION_BUILD_DIR/SVProgressHUD"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/AFNetworking/AFNetworking.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/MJExtension/MJExtension.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/MJRefresh/MJRefresh.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SDWebImage/SDWebImage.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SVProgressHUD/SVProgressHUD.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "AFNetworking" -framework "MJExtension" -framework "MJRefresh" -framework "SDWebImage" -framework "SVProgressHUD"
+OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/AFNetworking/AFNetworking.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/DACircularProgress/DACircularProgress.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/MJExtension/MJExtension.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/MJRefresh/MJRefresh.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SDWebImage/SDWebImage.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SVProgressHUD/SVProgressHUD.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "AFNetworking" -framework "DACircularProgress" -framework "MJExtension" -framework "MJRefresh" -framework "SDWebImage" -framework "SVProgressHUD"
 PODS_ROOT = ${SRCROOT}/Pods

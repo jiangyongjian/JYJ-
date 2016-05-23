@@ -6,8 +6,8 @@
 //  Copyright © 2016年 baobeikeji. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "JYJTopicViewController.h"
 
-@interface JYJAllViewController : UITableViewController
+@interface JYJAllViewController : JYJTopicViewController
 
 @end
