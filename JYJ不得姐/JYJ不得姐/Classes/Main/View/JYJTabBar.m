@@ -7,6 +7,8 @@
 //
 
 #import "JYJTabBar.h"
+#import "JYJPublishViewController.h"
+#import "JYJPublishView.h"
 
 @interface JYJTabBar ()
 /** 发布按钮 */
@@ -17,14 +19,27 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        // 设置tabBar的背景图片
+        [self setBackgroundImage:[UIImage imageNamed:@"tabbar-light"]];
+        
         UIButton *publishButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [publishButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
         [publishButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
+        [publishButton addTarget:self action:@selector(publishClick) forControlEvents:UIControlEventTouchUpInside];
         publishButton.size = publishButton.currentBackgroundImage.size;
         [self addSubview:publishButton];
         self.publishButton = publishButton;
     }
     return self;
+}
+
+- (void)publishClick {
+//    JYJPublishViewController *publish = [[JYJPublishViewController alloc] init];
+//    [JYJKeyWindow.rootViewController presentViewController:publish animated:NO completion:nil];
+//    JYJPublishView *publish = [JYJPublishView publishView];
+//    publish.frame = JYJKeyWindow.bounds;
+//    [JYJKeyWindow addSubview:publish];
+    [JYJPublishView show];
 }
 
 - (void)layoutSubviews {
@@ -49,7 +64,6 @@
         // 增加索引
         index++;
     }
-    
 }
 
 @end

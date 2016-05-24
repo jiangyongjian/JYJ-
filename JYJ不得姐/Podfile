@@ -8,5 +8,6 @@ pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'SVProgressHUD'
 pod 'DACircularProgress'
+pod 'pop'
 end
 

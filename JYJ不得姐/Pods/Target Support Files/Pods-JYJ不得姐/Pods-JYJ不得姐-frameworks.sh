@@ -90,6 +90,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$CONFIGURATION_BUILD_DIR/MJRefresh/MJRefresh.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/SDWebImage/SDWebImage.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/SVProgressHUD/SVProgressHUD.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/pop/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$CONFIGURATION_BUILD_DIR/AFNetworking/AFNetworking.framework"
@@ -98,4 +99,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$CONFIGURATION_BUILD_DIR/MJRefresh/MJRefresh.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/SDWebImage/SDWebImage.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/SVProgressHUD/SVProgressHUD.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/pop/pop.framework"
 fi
