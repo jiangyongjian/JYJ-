@@ -12,4 +12,7 @@
 @interface JYJTopicViewController : UITableViewController
 
 - (JYJTopicType)type;
+
+/** 是否是最新控制器 */
+@property (nonatomic, assign, getter=isNewVc) BOOL newVc;
 @end

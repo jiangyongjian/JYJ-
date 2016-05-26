@@ -8,21 +8,30 @@
 
 #import "JYJTopic.h"
 #import "MJExtension.h"
+#import "JYJComment.h"
+#import "JYJUser.h"
 
 @implementation JYJTopic
 {
     CGFloat _cellHeight;
-    CGRect _pictureF;
 }
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{
              @"small_image" : @"image0",
              @"large_image" : @"image1",
-             @"middle_image" : @"image2"
+             @"middle_image" : @"image2",
+             @"ID" : @"id",
+             @"top_cmt" : @"top_cmt[0]"
              };
 }
 
+//+ (NSDictionary *)objectClassInArray
+//{
+//    //    return @{@"top_cmt" : [XMGComment class]};
+//    return @{@"top_cmt" : @"JYJComment"};
+//}
+//
 
 - (NSString *)create_time
 {
@@ -61,7 +70,7 @@
     if (!_cellHeight) {
         
         // 文字的最大尺寸
-        CGSize maxSize = CGSizeMake(JYJScreenW - 4 * JYJTopicCellMargin, MAXFLOAT);
+        CGSize maxSize = CGSizeMake(JYJScreenW - 2 * JYJTopicCellMargin, MAXFLOAT);
         
         CGFloat textH = [self.text sizeWithFont:[UIFont systemFontOfSize:14] maxSize:maxSize].height;
         
@@ -70,23 +79,47 @@
         
         // 根据段子的类型来计算cell的高度
         if (self.type == JYJTopicTypePicture) { // 图片帖子
-            // 图片显示出来的宽度
-            CGFloat pictureW = maxSize.width;
-            // 显示显示出来的高度
-            CGFloat pictureH = pictureW * self.height / self.width;
-            
-            if (pictureH >= JYJTopicCellPictureMaxH) {
-                pictureH = JYJTopicCellPictureBreakH;
-                self.bigPicture = YES; // 大图
+            if (self.width != 0 && self.height != 0) {
+                // 图片显示出来的宽度
+                CGFloat pictureW = maxSize.width;
+                // 显示显示出来的高度
+                CGFloat pictureH = pictureW * self.height / self.width;
+                
+                if (pictureH >= JYJTopicCellPictureMaxH) {
+                    pictureH = JYJTopicCellPictureBreakH;
+                    self.bigPicture = YES; // 大图
+                }
+                
+                // 计算图片控件的frame
+                CGFloat pictureX = JYJTopicCellMargin;
+                CGFloat pictureY = JYJTopicCellTextY + textH + JYJTopicCellMargin;
+                _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+                _cellHeight += pictureH + JYJTopicCellMargin;
             }
-            
-            // 计算图片控件的frame
-            CGFloat pictureX = JYJTopicCellMargin;
-            CGFloat pictureY = JYJTopicCellTextY + textH + JYJTopicCellMargin;
-            _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
-            _cellHeight += pictureH + JYJTopicCellMargin;
         } else if (self.type == JYJTopicTypeVoice) { // 声音帖子
+            CGFloat voiceX = JYJTopicCellMargin;
+            CGFloat voiceY = JYJTopicCellTextY + textH + JYJTopicCellMargin;
+            CGFloat voiceW = maxSize.width;
+            CGFloat voiceH = voiceW * self.height / self.width;
+            _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
             
+            _cellHeight += voiceH + JYJTopicCellMargin;
+        } else if (self.type == JYJTopicTypeVideo) { // 视频帖子
+            CGFloat videoX = JYJTopicCellMargin;
+            CGFloat videoY = JYJTopicCellTextY + textH + JYJTopicCellMargin;
+            CGFloat videoW = maxSize.width;
+            CGFloat videoH = videoW * self.height / self.width;
+            _videoF = CGRectMake(videoX, videoY, videoW, videoH);
+            
+            _cellHeight += videoH + JYJTopicCellMargin;
+        } 
+        
+        // 如果有最热评论
+        if (self.top_cmt) {
+            NSString *content = [NSString stringWithFormat:@"%@ : %@", self.top_cmt.user.username, self.top_cmt.content];
+            CGFloat contentH = [content sizeWithFont:[UIFont systemFontOfSize:13] maxSize:maxSize].height;
+            
+            _cellHeight += JYJTopicCellTopCmtTitleH + contentH + JYJTopicCellMargin;
         }
         
         // 底部工具条的高度

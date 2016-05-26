@@ -29,6 +29,8 @@
 #define JYJScreenW [UIScreen mainScreen].bounds.size.width
 #define JYJScreenBounds [UIScreen mainScreen].bounds
 #define JYJKeyWindow [UIApplication sharedApplication].keyWindow
+#define JYJRootTabBarController (UITabBarController *)JYJKeyWindow.rootViewController;
+
 
 // 随机色
 #define JYJRandomColor JYJColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))

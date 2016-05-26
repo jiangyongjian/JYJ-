@@ -22,3 +22,22 @@ CGFloat const JYJTopicCellBottomBarH = 44;
 CGFloat const JYJTopicCellPictureMaxH = 1000;
 /** 精华-cell-图片帖子一旦超过最大高度,就是用Break */
 CGFloat const JYJTopicCellPictureBreakH = 250;
+
+/** XMGUser模型-性别属性值 */
+NSString * const JYJGUserSexMale = @"m";
+NSString * const JYJGUserSexFemale = @"f";
+
+/** 精华-cell-最热评论标题的高度 */
+CGFloat const JYJTopicCellTopCmtTitleH = 20;
+
+
+/** tabBar被选中的通知名字 */
+NSString * const JYJTabBarDidSelectNotification = @"JYJTabBarDidSelectNotification";
+/** tabBar被选中的通知 - 被选中的控制器的index key */
+NSString * const JYJSelectedControllerIndexKey = @"JYJSelectedControllerIndexKey";
+/** tabBar被选中的通知 - 被选中的控制器 key */
+NSString * const JYJSelectedControllerKey = @"JYJSelectedControllerKey";
+
+
+
+

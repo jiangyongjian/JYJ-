@@ -45,6 +45,10 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
+    // 标记是否已经添加过监听器
+    // 静态变量 后面改了前面也会改，只分配一个内存
+    static BOOL added = NO;
+    
     CGFloat width = self.width;
     CGFloat height = self.height;
     
@@ -56,14 +60,25 @@
     CGFloat buttonW = width / 5;
     CGFloat buttonH = height;
     NSInteger index = 0;
-    for (UIView *button in self.subviews) {
+    for (UIControl *button in self.subviews) {
         if (![button isKindOfClass:[UIControl class]] || button == self.publishButton) continue;
         // 计算按钮的X值
         CGFloat buttonX = buttonW * ((index > 1)?(index + 1):index);
         button.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
         // 增加索引
         index++;
+        
+        if (added == NO) {
+            // 监听按钮点击
+            [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+        }
     }
+    added = YES;
+}
+
+- (void)buttonClick {
+    // 发出一个通知
+    [JYJNoteCenter postNotificationName:JYJTabBarDidSelectNotification object:nil userInfo:nil];
 }
 
 @end

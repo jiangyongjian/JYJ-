@@ -14,6 +14,8 @@
 #import "MJRefresh.h"
 #import "JYJTopic.h"
 #import "JYJTopicCell.h"
+#import "JYJCommentViewController.h"
+#import "JYJNewViewController.h"
 
 @interface JYJTopicViewController ()
 /** 帖子数据 */
@@ -24,6 +26,9 @@
 @property (nonatomic, copy) NSString *maxtime;
 /** 上一次的请求参数 */
 @property (nonatomic, strong) NSDictionary *params;
+
+/** 上次选中的索引 */
+@property (nonatomic, assign) NSUInteger lastSelectedIndex;
 @end
 
 @implementation JYJTopicViewController
@@ -46,12 +51,28 @@ static NSString *const JYJTopicCellId = @"topic";
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor clearColor];
-    
+
     // 注册cell
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYJTopicCell class]) bundle:nil] forCellReuseIdentifier:JYJTopicCellId];
     
     // 添加刷新控件
     [self setupRefresh];
+    
+    //监听tabBar按钮重复点击的通知
+    [JYJNoteCenter addObserver:self selector:@selector(tabBarSelect) name:JYJTabBarDidSelectNotification object:nil];
+}
+
+/**
+ *  tabBar按钮重复点击
+ */
+- (void)tabBarSelect {
+    // 如果是联系选中2次，直接刷新
+    UITabBarController *tabBarVc = JYJRootTabBarController;
+    if (self.lastSelectedIndex == tabBarVc.selectedIndex && self.view.isShowingOnKeyWindow) {
+        [self.tableView.mj_header beginRefreshing];
+    }
+    // 记录这一次选中的索引
+    self.lastSelectedIndex = tabBarVc.selectedIndex;
 }
 
 /**
@@ -67,7 +88,8 @@ static NSString *const JYJTopicCellId = @"topic";
 
 #pragma mark - a 参数
 - (NSString *)a {
-    return @"list";
+    UITabBarController *tabBarVc = JYJRootTabBarController;
+    return  tabBarVc.selectedIndex == 1 ? @"newlist" : @"list";
 }
 
 #pragma makr - 数据处理
@@ -80,7 +102,7 @@ static NSString *const JYJTopicCellId = @"topic";
     
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.a;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     self.params = params;
@@ -167,6 +189,7 @@ static NSString *const JYJTopicCellId = @"topic";
     JYJTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:JYJTopicCellId];
     
     cell.topic = self.topics[indexPath.row];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -181,6 +204,17 @@ static NSString *const JYJTopicCellId = @"topic";
     JYJTopic *topic = self.topics[indexPath.row];
     // 返回这个模型对应的cell高度
     return topic.cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    JYJCommentViewController *commentVc = [[JYJCommentViewController alloc] init];
+    commentVc.topic = self.topics[indexPath.row];
+    
+//    UITabBarController *tabBarVc = (UITabBarController *)JYJKeyWindow.rootViewController;
+//    [(UINavigationController *)tabBarVc.selectedViewController pushViewController:commentVc animated:YES];
+    UITabBarController *tabBarVc = JYJRootTabBarController;
+    UINavigationController *nav = (UINavigationController *)tabBarVc.selectedViewController;
+    [nav pushViewController:commentVc animated:YES];
 }
 
 @end
