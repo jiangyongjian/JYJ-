@@ -9,5 +9,6 @@ pod 'SDWebImage'
 pod 'SVProgressHUD'
 pod 'DACircularProgress'
 pod 'pop'
+pod 'NJKWebViewProgress'
 end
 

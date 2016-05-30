@@ -9,6 +9,8 @@
 #import "JYJPublishViewController.h"
 #import "JYJVerticalButton.h"
 #import "POP.h"
+#import "JYJPostWordViewController.h"
+#import "JYJNavigationController.h"
 
 @interface JYJPublishViewController ()
 
@@ -99,6 +101,10 @@ static CGFloat const JYJSpringFactor = 10;
             JYJLog(@"发视频");
         } else if (button.tag == 1) {
             JYJLog(@"发图片");
+        } else if (button.tag == 2) {
+            JYJPostWordViewController *postWord = [[JYJPostWordViewController alloc] init];
+            JYJNavigationController *nav = [[JYJNavigationController alloc] initWithRootViewController:postWord];
+            [JYJKeyWindow.rootViewController presentViewController:nav animated:YES completion:nil];
         }
     }];
 }

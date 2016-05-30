@@ -38,6 +38,9 @@ NSString * const JYJSelectedControllerIndexKey = @"JYJSelectedControllerIndexKey
 /** tabBar被选中的通知 - 被选中的控制器 key */
 NSString * const JYJSelectedControllerKey = @"JYJSelectedControllerKey";
 
-
+/** 标签-间距 */
+CGFloat const JYJTagMargin = 5;
+/** 标签-高度 */
+CGFloat const JYJTagH = 25;
 
 

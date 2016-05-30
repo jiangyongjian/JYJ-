@@ -9,6 +9,8 @@
 #import "JYJPublishView.h"
 #import "JYJVerticalButton.h"
 #import "POP.h"
+#import "JYJPostWordViewController.h"
+#import "JYJNavigationController.h"
 
 static CGFloat const JYJAnimationDelay = 0.1;
 static CGFloat const JYJSpringFactor = 10;
@@ -91,7 +93,7 @@ static UIWindow *window_;
     anim.springSpeed = JYJSpringFactor;
     anim.springBounciness = JYJSpringFactor;
     [anim setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
-        // 标语动画执行完毕，恢复点击事件
+    // 标语动画执行完毕，恢复点击事件
 //        JYJKeyWindow.rootViewController.view.userInteractionEnabled = YES;
         self.userInteractionEnabled = YES;
     }];
@@ -113,7 +115,12 @@ static UIWindow *window_;
             JYJLog(@"发视频");
         } else if (button.tag == 1) {
             JYJLog(@"发图片");
+        } else if (button.tag == 2) {
+            JYJPostWordViewController *postWord = [[JYJPostWordViewController alloc] init];
+            JYJNavigationController *nav = [[JYJNavigationController alloc] initWithRootViewController:postWord];
+            [JYJKeyWindow.rootViewController presentViewController:nav animated:YES completion:nil];
         }
+
     }];
 }
 
@@ -129,9 +136,7 @@ static UIWindow *window_;
     int beginIndex = 1;
     NSUInteger count = self.subviews.count;
     for (int i = beginIndex; i < count; i++) {
-        UIView *subView = self.subviews[count - 1 + beginIndex - i];
-        JYJLog(@"%@", subView);
-        
+        UIView *subView = self.subviews[count - 1 + beginIndex - i];        
         // 基本动画
         POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewCenter];
         CGFloat centerY = subView.centerY + JYJScreenH;
@@ -146,10 +151,11 @@ static UIWindow *window_;
         if (beginIndex == (count - 1 + beginIndex - i)) {
             [anim setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
 //                JYJKeyWindow.rootViewController.view.userInteractionEnabled = YES;
-//                [self removeFromSuperview];
+                // iOS9中一定要hidden
+                window_.hidden = YES;
                 // 销毁窗口
                 window_ = nil;
-
+                
                 !completionBloack ? : completionBloack();
             }];
         }
