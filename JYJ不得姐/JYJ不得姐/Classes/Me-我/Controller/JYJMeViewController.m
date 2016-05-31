@@ -9,6 +9,7 @@
 #import "JYJMeViewController.h"
 #import "JYJMeCell.h"
 #import "JYJMeFooterView.h"
+#import "JYJSettingViewController.h"
 
 
 static NSString *JYJMeId = @"me";
@@ -61,7 +62,7 @@ static NSString *JYJMeId = @"me";
 
 - (void)settingClick
 {
-    JYJLog(@"---");
+    [self.navigationController pushViewController:[[JYJSettingViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
 }
 
 - (void)moonClick

@@ -32,6 +32,12 @@
 #define JYJRootTabBarController (UITabBarController *)JYJKeyWindow.rootViewController
 
 
+/**
+ 沙盒路径
+ */
+#define JYJCaches [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
+
+
 // 随机色
 #define JYJRandomColor JYJColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 

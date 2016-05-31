@@ -62,6 +62,7 @@
 		E2844FDF1CC4B17700DDB296 /* JYJRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2844FDE1CC4B17700DDB296 /* JYJRecommendUser.m */; };
 		E28FB9CB1CFBD60200D325C2 /* JYJTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E28FB9CA1CFBD60200D325C2 /* JYJTagButton.m */; };
 		E28FB9CE1CFC039800D325C2 /* JYJTagTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E28FB9CD1CFC039800D325C2 /* JYJTagTextField.m */; };
+		E28FB9D11CFC469C00D325C2 /* JYJSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28FB9D01CFC469C00D325C2 /* JYJSettingViewController.m */; };
 		E2952F201CAA8DB80009C64E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2952F1F1CAA8DB80009C64E /* Assets.xcassets */; };
 		E29750D41CDA047E00DA0C8D /* UIImageView+BXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E29750D31CDA047E00DA0C8D /* UIImageView+BXExtension.m */; };
 		E29BAA241CAD672C00FF0972 /* JYJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E29BAA231CAD672C00FF0972 /* JYJTabBar.m */; };
@@ -204,6 +205,8 @@
 		E28FB9CA1CFBD60200D325C2 /* JYJTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJTagButton.m; sourceTree = "<group>"; };
 		E28FB9CC1CFC039800D325C2 /* JYJTagTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJTagTextField.h; sourceTree = "<group>"; };
 		E28FB9CD1CFC039800D325C2 /* JYJTagTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJTagTextField.m; sourceTree = "<group>"; };
+		E28FB9CF1CFC469C00D325C2 /* JYJSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJSettingViewController.h; sourceTree = "<group>"; };
+		E28FB9D01CFC469C00D325C2 /* JYJSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJSettingViewController.m; sourceTree = "<group>"; };
 		E2952F101CAA8DB80009C64E /* JYJ不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JYJ不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2952F1F1CAA8DB80009C64E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E29750D21CDA047E00DA0C8D /* UIImageView+BXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+BXExtension.h"; sourceTree = "<group>"; };
@@ -524,6 +527,8 @@
 				E2F748F41CF6F4E3000D9D7B /* JYJWebViewController.h */,
 				E2F748F51CF6F4E3000D9D7B /* JYJWebViewController.m */,
 				E2F748F61CF6F4E3000D9D7B /* JYJWebViewController.xib */,
+				E28FB9CF1CFC469C00D325C2 /* JYJSettingViewController.h */,
+				E28FB9D01CFC469C00D325C2 /* JYJSettingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -894,6 +899,7 @@
 				E22D86811CAB7C180085FB48 /* UIImage+ScreenShot.m in Sources */,
 				E29BAA241CAD672C00FF0972 /* JYJTabBar.m in Sources */,
 				E28FB9CB1CFBD60200D325C2 /* JYJTagButton.m in Sources */,
+				E28FB9D11CFC469C00D325C2 /* JYJSettingViewController.m in Sources */,
 				E29750D41CDA047E00DA0C8D /* UIImageView+BXExtension.m in Sources */,
 				E24D15FA1CF032FB004B86A5 /* JYJTopicCell.m in Sources */,
 				E2F976FD1CE30CB20010DBE0 /* JYJTextField.m in Sources */,
